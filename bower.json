@@ -1,0 +1,27 @@
+{
+  "name": "courses",
+  "authors": [
+    "Max Kolyadin <makcyxa-k@yandex.ru>"
+  ],
+  "description": "courses",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/assets/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "typopro": "~3.4.3",
+    "google-fonts": "*",
+    "animate.css": "~3.5.1",
+    "font-awesome": "fontawesome#~4.5.0",
+    "Snap.svg": "snap.svg#~0.4.1",
+    "waypoints": "^4.0.0"
+  }
+}

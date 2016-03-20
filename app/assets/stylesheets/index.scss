@@ -1,0 +1,204 @@
+// Place all the styles related to the index controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$pink: #D13350;
+$red: #981a21;
+$bright-red: #EB5745;
+$gray: #74777b;
+
+.text-danger {
+  color: $red;
+}
+
+.center-text {
+  text-align: center;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('google-fonts/apache/robotocondensed/RobotoCondensed-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Scala';
+  src: url('google-fonts/ufl/ubuntu/Ubuntu-Light.ttf') format('truetype');
+}
+
+/* Styles */
+html,body {
+  height:100%;
+  margin:0;
+  font-family: 'Scala';
+}
+
+.scroll_down {
+    opacity: 0;
+    position: absolute;
+    bottom: 4%;
+    height: 100px;
+    left: 0;
+    width: 100%;
+    z-index: 89;
+    color: #fff;
+    text-align: center;
+    & .mouse {
+    	position: relative;
+    	display: block;
+    	width: 36px;
+    	height: 58px;
+    	margin: 0 auto;
+    	-webkit-box-sizing: border-box;
+    	-moz-box-sizing: border-box;
+    	box-sizing: border-box;
+    	border: 3px solid #fff;
+    	border-radius: 23px;
+    }
+
+    & .mouse .mouse-mouvement {
+    	position: absolute;
+    	display: block;
+    	top: 29%;
+    	left: 50%;
+    	width: 8px;
+    	height: 8px;
+    	margin: -4px 0 0 -4px;
+    	background: #fff;
+    	border-radius: 50%;
+    	-webkit-animation: scroll-ani 4s linear infinite;
+    	-moz-animation: scroll-ani 4s linear infinite;
+    	animation: scroll-ani 4s linear infinite;
+    }
+    & .mouse-message {
+    	font-size: 14px;
+    	text-align: center;
+    	display: block;
+    	padding: 20px 0 0;
+    	color: #fff;
+    }
+}
+
+.content {
+  height:100%;
+  min-height:100%;/*for mozilla*/
+}
+
+html>body .content {
+  height:100%;
+  position: relative;
+  color: $gray;
+  & > .center-text-wrap {
+    text-align: center;
+    display: table;
+    height: 100%;
+    width: 100%;
+    & > .center-text {
+      vertical-align: middle;
+      display: table-cell;
+      & h1 {
+        font-size: 80px;
+      }
+    }
+  }
+}
+
+#video_bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  & video {
+    visibility: visible;
+    margin: auto;
+    position: absolute;
+    z-index: -1;
+    top: 0%;
+    left: 0%;
+    transform: translate(0%, 0%);
+  }
+}
+
+@media (min-aspect-ratio: 16/9) {
+  video {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  video {
+    width: auto !important;
+    height: 100% !important;
+  }
+}
+
+#one {
+  color: white;
+  background: rgba(#981a21, 0.5);
+  & #line-1, #line-2 {
+    opacity: 0;
+  }
+}
+
+#two {
+  // background: #8F2041;
+  z-index: 1;
+  background: white;
+  & .ruby-icon {
+    position: absolute;
+    left: calc(50% - 177.5px);
+    top: calc(50% - 177.5px);
+    opacity: 1;
+    z-index: -1;
+  }
+  & .row-1 {
+    display: table;
+    width: 100%;
+    height: 100%;
+    & h1 {
+      margin-top: 50px !important;
+      font-size: 36px;
+    }
+  }
+
+  & svg {
+    z-index: 100;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  & p {
+    margin: 2px;
+  }
+
+  & .bubble {
+    position: absolute;
+    opacity: 0;
+    // background: $bright-red;
+    color: white;
+    // max-width: 200px;
+    // border-radius: 10px;
+    // padding: 10px 20px;
+    z-index: 101;
+    // text-align: center;
+    &.one {
+      left: 6.5%;
+      top: calc(50% - 61.5px);
+    }
+  }
+}
+
+#three {
+  background: #EB5745;
+}
+
+#four {
+  background: #FF905E;
+}
+
+#five {
+  background: #FFDB77;
+}

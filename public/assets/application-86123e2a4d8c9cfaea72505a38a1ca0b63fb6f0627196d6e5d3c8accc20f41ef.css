@@ -1,0 +1,607 @@
+/* Styles */
+/* line 8, /Users/maxflex/Documents/Ruby/courses/app/assets/stylesheets/index.scss */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'TypoPRO Roboto Light';
+}
+
+/* line 14, /Users/maxflex/Documents/Ruby/courses/app/assets/stylesheets/index.scss */
+.scroll_down {
+  position: absolute;
+  bottom: 4%;
+  height: 100px;
+  left: 0;
+  width: 100%;
+  z-index: 89;
+  color: #fff;
+  text-align: center;
+}
+
+/* line 25, /Users/maxflex/Documents/Ruby/courses/app/assets/stylesheets/index.scss */
+.content {
+  height: 100%;
+  min-height: 100%;
+  /*for mozilla*/
+}
+
+/* line 30, /Users/maxflex/Documents/Ruby/courses/app/assets/stylesheets/index.scss */
+html > body .content {
+  height: 100%;
+}
+/* line 32, /Users/maxflex/Documents/Ruby/courses/app/assets/stylesheets/index.scss */
+html > body .content > .center-text-wrap {
+  text-align: center;
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+/* line 37, /Users/maxflex/Documents/Ruby/courses/app/assets/stylesheets/index.scss */
+html > body .content > .center-text-wrap > .center-text {
+  vertical-align: middle;
+  display: table-cell;
+}
+/* line 40, /Users/maxflex/Documents/Ruby/courses/app/assets/stylesheets/index.scss */
+html > body .content > .center-text-wrap > .center-text h1 {
+  font-size: 80px;
+}
+
+/* line 47, /Users/maxflex/Documents/Ruby/courses/app/assets/stylesheets/index.scss */
+#video_bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 53, /Users/maxflex/Documents/Ruby/courses/app/assets/stylesheets/index.scss */
+#video_bg video {
+  visibility: visible;
+  margin: auto;
+  position: absolute;
+  z-index: -1;
+  top: 0%;
+  left: 0%;
+  transform: translate(0%, 0%);
+  width: auto;
+  height: 100%;
+}
+
+/* line 66, /Users/maxflex/Documents/Ruby/courses/app/assets/stylesheets/index.scss */
+#one {
+  color: white;
+  background: rgba(152, 26, 33, 0.5);
+}
+
+/* line 71, /Users/maxflex/Documents/Ruby/courses/app/assets/stylesheets/index.scss */
+#two {
+  background: #8F2041;
+}
+
+/* line 75, /Users/maxflex/Documents/Ruby/courses/app/assets/stylesheets/index.scss */
+#three {
+  background: #DC554F;
+}
+
+/* line 79, /Users/maxflex/Documents/Ruby/courses/app/assets/stylesheets/index.scss */
+#four {
+  background: #FF905E;
+}
+
+/* line 83, /Users/maxflex/Documents/Ruby/courses/app/assets/stylesheets/index.scss */
+#five {
+  background: #FFDB77;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+
+
+ */
+
+
+/* TypoPRO Raleway Medium */
+
+@font-face {
+    font-family:  'Raleway';
+    src:          url('TypoPRO-Raleway-Medium.eot');
+    src:          local('*'),
+                  url('TypoPRO-Raleway-Medium.eot?#iefix') format('embedded-opentype'),
+                  url('TypoPRO-Raleway-Medium.woff') format('woff'),
+                  url('TypoPRO-Raleway-Medium.ttf') format('truetype');
+    font-style:   normal;
+    font-weight:  500;
+    font-stretch: normal;
+    font-variant: normal;
+}
+
+/* TypoPRO Roboto Black */
+
+@font-face {
+    font-family:  'TypoPRO Roboto';
+    src:          url('TypoPRO-Roboto-Black.eot');
+    src:          local('*'),
+                  url('TypoPRO-Roboto-Black.eot?#iefix') format('embedded-opentype'),
+                  url('TypoPRO-Roboto-Black.woff') format('woff'),
+                  url('TypoPRO-Roboto-Black.ttf') format('truetype');
+    font-style:   normal;
+    font-weight:  800;
+    font-stretch: normal;
+    font-variant: normal;
+}
+
+
+/* TypoPRO Roboto Black Italic */
+@font-face {
+    font-family:  'TypoPRO Roboto';
+    src:          url('TypoPRO-Roboto-BlackItalic.eot');
+    src:          local('*'),
+                  url('TypoPRO-Roboto-BlackItalic.eot?#iefix') format('embedded-opentype'),
+                  url('TypoPRO-Roboto-BlackItalic.woff') format('woff'),
+                  url('TypoPRO-Roboto-BlackItalic.ttf') format('truetype');
+    font-style:   italic;
+    font-weight:  800;
+    font-stretch: normal;
+    font-variant: normal;
+}
+
+
+/* TypoPRO Roboto Bold */
+@font-face {
+    font-family:  'TypoPRO Roboto';
+    src:          url('TypoPRO-Roboto-Bold.eot');
+    src:          local('*'),
+                  url('TypoPRO-Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+                  url('TypoPRO-Roboto-Bold.woff') format('woff'),
+                  url('TypoPRO-Roboto-Bold.ttf') format('truetype');
+    font-style:   normal;
+    font-weight:  bold;
+    font-stretch: normal;
+    font-variant: normal;
+}
+
+
+/* TypoPRO Roboto Bold Italic */
+@font-face {
+    font-family:  'TypoPRO Roboto';
+    src:          url('TypoPRO-Roboto-BoldItalic.eot');
+    src:          local('*'),
+                  url('TypoPRO-Roboto-BoldItalic.eot?#iefix') format('embedded-opentype'),
+                  url('TypoPRO-Roboto-BoldItalic.woff') format('woff'),
+                  url('TypoPRO-Roboto-BoldItalic.ttf') format('truetype');
+    font-style:   italic;
+    font-weight:  bold;
+    font-stretch: normal;
+    font-variant: normal;
+}
+
+
+/* TypoPRO Roboto Italic */
+@font-face {
+    font-family:  'TypoPRO Roboto';
+    src:          url('TypoPRO-Roboto-Italic.eot');
+    src:          local('*'),
+                  url('TypoPRO-Roboto-Italic.eot?#iefix') format('embedded-opentype'),
+                  url('TypoPRO-Roboto-Italic.woff') format('woff'),
+                  url('TypoPRO-Roboto-Italic.ttf') format('truetype');
+    font-style:   italic;
+    font-weight:  normal;
+    font-stretch: normal;
+    font-variant: normal;
+}
+
+
+/* TypoPRO Roboto Light */
+@font-face {
+    font-family:  'TypoPRO Roboto Light';
+    src:          url('TypoPRO-Roboto-Light.eot');
+    src:          local('*'),
+                  url('TypoPRO-Roboto-Light.eot?#iefix') format('embedded-opentype'),
+                  url('TypoPRO-Roboto-Light.woff') format('woff'),
+                  url('TypoPRO-Roboto-Light.ttf') format('truetype');
+    font-style:   normal;
+    font-weight:  300;
+    font-stretch: normal;
+    font-variant: normal;
+}
+
+
+/* TypoPRO Roboto Light Italic */
+@font-face {
+    font-family:  'TypoPRO Roboto';
+    src:          url('TypoPRO-Roboto-LightItalic.eot');
+    src:          local('*'),
+                  url('TypoPRO-Roboto-LightItalic.eot?#iefix') format('embedded-opentype'),
+                  url('TypoPRO-Roboto-LightItalic.woff') format('woff'),
+                  url('TypoPRO-Roboto-LightItalic.ttf') format('truetype');
+    font-style:   italic;
+    font-weight:  300;
+    font-stretch: normal;
+    font-variant: normal;
+}
+
+
+/* TypoPRO Roboto Medium */
+@font-face {
+    font-family:  'TypoPRO Roboto';
+    src:          url('TypoPRO-Roboto-Medium.eot');
+    src:          local('*'),
+                  url('TypoPRO-Roboto-Medium.eot?#iefix') format('embedded-opentype'),
+                  url('TypoPRO-Roboto-Medium.woff') format('woff'),
+                  url('TypoPRO-Roboto-Medium.ttf') format('truetype');
+    font-style:   normal;
+    font-weight:  500;
+    font-stretch: normal;
+    font-variant: normal;
+}
+
+
+/* TypoPRO Roboto Medium Italic */
+@font-face {
+    font-family:  'TypoPRO Roboto';
+    src:          url('TypoPRO-Roboto-MediumItalic.eot');
+    src:          local('*'),
+                  url('TypoPRO-Roboto-MediumItalic.eot?#iefix') format('embedded-opentype'),
+                  url('TypoPRO-Roboto-MediumItalic.woff') format('woff'),
+                  url('TypoPRO-Roboto-MediumItalic.ttf') format('truetype');
+    font-style:   italic;
+    font-weight:  500;
+    font-stretch: normal;
+    font-variant: normal;
+}
+
+
+/* TypoPRO Roboto Regular */
+@font-face {
+    font-family:  'TypoPRO Roboto';
+    src:          url('TypoPRO-Roboto-Regular.eot');
+    src:          local('*'),
+                  url('TypoPRO-Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+                  url('TypoPRO-Roboto-Regular.woff') format('woff'),
+                  url('TypoPRO-Roboto-Regular.ttf') format('truetype');
+    font-style:   normal;
+    font-weight:  normal;
+    font-stretch: normal;
+    font-variant: normal;
+}
+
+
+/* TypoPRO Roboto Thin */
+@font-face {
+    font-family:  'TypoPRO Roboto';
+    src:          url('TypoPRO-Roboto-Thin.eot');
+    src:          local('*'),
+                  url('TypoPRO-Roboto-Thin.eot?#iefix') format('embedded-opentype'),
+                  url('TypoPRO-Roboto-Thin.woff') format('woff'),
+                  url('TypoPRO-Roboto-Thin.ttf') format('truetype');
+    font-style:   normal;
+    font-weight:  200;
+    font-stretch: normal;
+    font-variant: normal;
+}
+
+
+/* TypoPRO Roboto Thin Italic */
+@font-face {
+    font-family:  'TypoPRO Roboto';
+    src:          url('TypoPRO-Roboto-ThinItalic.eot');
+    src:          local('*'),
+                  url('TypoPRO-Roboto-ThinItalic.eot?#iefix') format('embedded-opentype'),
+                  url('TypoPRO-Roboto-ThinItalic.woff') format('woff'),
+                  url('TypoPRO-Roboto-ThinItalic.ttf') format('truetype');
+    font-style:   italic;
+    font-weight:  200;
+    font-stretch: normal;
+    font-variant: normal;
+}
+
+
+/* TypoPRO Roboto Condensed Bold */
+@font-face {
+    font-family:  'TypoPRO Roboto';
+    src:          url('TypoPRO-RobotoCondensed-Bold.eot');
+    src:          local('*'),
+                  url('TypoPRO-RobotoCondensed-Bold.eot?#iefix') format('embedded-opentype'),
+                  url('TypoPRO-RobotoCondensed-Bold.woff') format('woff'),
+                  url('TypoPRO-RobotoCondensed-Bold.ttf') format('truetype');
+    font-style:   normal;
+    font-weight:  bold;
+    font-stretch: condensed;
+    font-variant: normal;
+}
+
+
+/* TypoPRO Roboto Condensed Bold Italic */
+@font-face {
+    font-family:  'TypoPRO Roboto';
+    src:          url('TypoPRO-RobotoCondensed-BoldItalic.eot');
+    src:          local('*'),
+                  url('TypoPRO-RobotoCondensed-BoldItalic.eot?#iefix') format('embedded-opentype'),
+                  url('TypoPRO-RobotoCondensed-BoldItalic.woff') format('woff'),
+                  url('TypoPRO-RobotoCondensed-BoldItalic.ttf') format('truetype');
+    font-style:   italic;
+    font-weight:  bold;
+    font-stretch: condensed;
+    font-variant: normal;
+}
+
+
+/* TypoPRO Roboto Condensed Italic */
+@font-face {
+    font-family:  'TypoPRO Roboto';
+    src:          url('TypoPRO-RobotoCondensed-Italic.eot');
+    src:          local('*'),
+                  url('TypoPRO-RobotoCondensed-Italic.eot?#iefix') format('embedded-opentype'),
+                  url('TypoPRO-RobotoCondensed-Italic.woff') format('woff'),
+                  url('TypoPRO-RobotoCondensed-Italic.ttf') format('truetype');
+    font-style:   italic;
+    font-weight:  normal;
+    font-stretch: condensed;
+    font-variant: normal;
+}
+
+
+/* TypoPRO Roboto Condensed Light */
+@font-face {
+    font-family:  'TypoPRO Roboto';
+    src:          url('TypoPRO-RobotoCondensed-Light.eot');
+    src:          local('*'),
+                  url('TypoPRO-RobotoCondensed-Light.eot?#iefix') format('embedded-opentype'),
+                  url('TypoPRO-RobotoCondensed-Light.woff') format('woff'),
+                  url('TypoPRO-RobotoCondensed-Light.ttf') format('truetype');
+    font-style:   normal;
+    font-weight:  300;
+    font-stretch: condensed;
+    font-variant: normal;
+}
+
+
+/* TypoPRO Roboto Condensed Light Italic */
+@font-face {
+    font-family:  'TypoPRO Roboto';
+    src:          url('TypoPRO-RobotoCondensed-LightItalic.eot');
+    src:          local('*'),
+                  url('TypoPRO-RobotoCondensed-LightItalic.eot?#iefix') format('embedded-opentype'),
+                  url('TypoPRO-RobotoCondensed-LightItalic.woff') format('woff'),
+                  url('TypoPRO-RobotoCondensed-LightItalic.ttf') format('truetype');
+    font-style:   italic;
+    font-weight:  300;
+    font-stretch: condensed;
+    font-variant: normal;
+}
+
+
+/* TypoPRO Roboto Condensed Regular */
+@font-face {
+    font-family:  'TypoPRO Roboto';
+    src:          url('TypoPRO-RobotoCondensed-Regular.eot');
+    src:          local('*'),
+                  url('TypoPRO-RobotoCondensed-Regular.eot?#iefix') format('embedded-opentype'),
+                  url('TypoPRO-RobotoCondensed-Regular.woff') format('woff'),
+                  url('TypoPRO-RobotoCondensed-Regular.ttf') format('truetype');
+    font-style:   normal;
+    font-weight:  normal;
+    font-stretch: condensed;
+    font-variant: normal;
+}
+
+
+/* TypoPRO Roboto Mono Bold */
+@font-face {
+    font-family:  'TypoPRO Roboto Mono';
+    src:          url('TypoPRO-RobotoMono-Bold.eot');
+    src:          local('*'),
+                  url('TypoPRO-RobotoMono-Bold.eot?#iefix') format('embedded-opentype'),
+                  url('TypoPRO-RobotoMono-Bold.woff') format('woff'),
+                  url('TypoPRO-RobotoMono-Bold.ttf') format('truetype');
+    font-style:   normal;
+    font-weight:  bold;
+    font-stretch: normal;
+    font-variant: normal;
+}
+
+
+/* TypoPRO Roboto Mono Bold Italic */
+@font-face {
+    font-family:  'TypoPRO Roboto Mono';
+    src:          url('TypoPRO-RobotoMono-BoldItalic.eot');
+    src:          local('*'),
+                  url('TypoPRO-RobotoMono-BoldItalic.eot?#iefix') format('embedded-opentype'),
+                  url('TypoPRO-RobotoMono-BoldItalic.woff') format('woff'),
+                  url('TypoPRO-RobotoMono-BoldItalic.ttf') format('truetype');
+    font-style:   italic;
+    font-weight:  bold;
+    font-stretch: normal;
+    font-variant: normal;
+}
+
+
+/* TypoPRO Roboto Mono Italic */
+@font-face {
+    font-family:  'TypoPRO Roboto Mono';
+    src:          url('TypoPRO-RobotoMono-Italic.eot');
+    src:          local('*'),
+                  url('TypoPRO-RobotoMono-Italic.eot?#iefix') format('embedded-opentype'),
+                  url('TypoPRO-RobotoMono-Italic.woff') format('woff'),
+                  url('TypoPRO-RobotoMono-Italic.ttf') format('truetype');
+    font-style:   italic;
+    font-weight:  normal;
+    font-stretch: normal;
+    font-variant: normal;
+}
+
+
+/* TypoPRO Roboto Mono Light */
+@font-face {
+    font-family:  'TypoPRO Roboto Mono';
+    src:          url('TypoPRO-RobotoMono-Light.eot');
+    src:          local('*'),
+                  url('TypoPRO-RobotoMono-Light.eot?#iefix') format('embedded-opentype'),
+                  url('TypoPRO-RobotoMono-Light.woff') format('woff'),
+                  url('TypoPRO-RobotoMono-Light.ttf') format('truetype');
+    font-style:   normal;
+    font-weight:  300;
+    font-stretch: normal;
+    font-variant: normal;
+}
+
+
+/* TypoPRO Roboto Mono Light Italic */
+@font-face {
+    font-family:  'TypoPRO Roboto Mono';
+    src:          url('TypoPRO-RobotoMono-LightItalic.eot');
+    src:          local('*'),
+                  url('TypoPRO-RobotoMono-LightItalic.eot?#iefix') format('embedded-opentype'),
+                  url('TypoPRO-RobotoMono-LightItalic.woff') format('woff'),
+                  url('TypoPRO-RobotoMono-LightItalic.ttf') format('truetype');
+    font-style:   italic;
+    font-weight:  300;
+    font-stretch: normal;
+    font-variant: normal;
+}
+
+
+/* TypoPRO Roboto Mono Medium */
+@font-face {
+    font-family:  'TypoPRO Roboto Mono';
+    src:          url('TypoPRO-RobotoMono-Medium.eot');
+    src:          local('*'),
+                  url('TypoPRO-RobotoMono-Medium.eot?#iefix') format('embedded-opentype'),
+                  url('TypoPRO-RobotoMono-Medium.woff') format('woff'),
+                  url('TypoPRO-RobotoMono-Medium.ttf') format('truetype');
+    font-style:   normal;
+    font-weight:  500;
+    font-stretch: normal;
+    font-variant: normal;
+}
+
+
+/* TypoPRO Roboto Mono Medium Italic */
+@font-face {
+    font-family:  'TypoPRO Roboto Mono';
+    src:          url('TypoPRO-RobotoMono-MediumItalic.eot');
+    src:          local('*'),
+                  url('TypoPRO-RobotoMono-MediumItalic.eot?#iefix') format('embedded-opentype'),
+                  url('TypoPRO-RobotoMono-MediumItalic.woff') format('woff'),
+                  url('TypoPRO-RobotoMono-MediumItalic.ttf') format('truetype');
+    font-style:   italic;
+    font-weight:  500;
+    font-stretch: normal;
+    font-variant: normal;
+}
+
+
+/* TypoPRO Roboto Mono */
+@font-face {
+    font-family:  'TypoPRO Roboto Mono';
+    src:          url('TypoPRO-RobotoMono-Regular.eot');
+    src:          local('*'),
+                  url('TypoPRO-RobotoMono-Regular.eot?#iefix') format('embedded-opentype'),
+                  url('TypoPRO-RobotoMono-Regular.woff') format('woff'),
+                  url('TypoPRO-RobotoMono-Regular.ttf') format('truetype');
+    font-style:   normal;
+    font-weight:  normal;
+    font-stretch: normal;
+    font-variant: normal;
+}
+
+
+/* TypoPRO Roboto Mono Thin */
+@font-face {
+    font-family:  'TypoPRO Roboto Mono';
+    src:          url('TypoPRO-RobotoMono-Thin.eot');
+    src:          local('*'),
+                  url('TypoPRO-RobotoMono-Thin.eot?#iefix') format('embedded-opentype'),
+                  url('TypoPRO-RobotoMono-Thin.woff') format('woff'),
+                  url('TypoPRO-RobotoMono-Thin.ttf') format('truetype');
+    font-style:   normal;
+    font-weight:  200;
+    font-stretch: normal;
+    font-variant: normal;
+}
+
+
+/* TypoPRO Roboto Mono Thin Italic */
+@font-face {
+    font-family:  'TypoPRO Roboto Mono';
+    src:          url('TypoPRO-RobotoMono-ThinItalic.eot');
+    src:          local('*'),
+                  url('TypoPRO-RobotoMono-ThinItalic.eot?#iefix') format('embedded-opentype'),
+                  url('TypoPRO-RobotoMono-ThinItalic.woff') format('woff'),
+                  url('TypoPRO-RobotoMono-ThinItalic.ttf') format('truetype');
+    font-style:   italic;
+    font-weight:  200;
+    font-stretch: normal;
+    font-variant: normal;
+}
+
+
+/* TypoPRO Roboto Slab Bold */
+@font-face {
+    font-family:  'TypoPRO Roboto Slab';
+    src:          url('TypoPRO-RobotoSlab-Bold.eot');
+    src:          local('*'),
+                  url('TypoPRO-RobotoSlab-Bold.eot?#iefix') format('embedded-opentype'),
+                  url('TypoPRO-RobotoSlab-Bold.woff') format('woff'),
+                  url('TypoPRO-RobotoSlab-Bold.ttf') format('truetype');
+    font-style:   normal;
+    font-weight:  bold;
+    font-stretch: normal;
+    font-variant: normal;
+}
+
+
+/* TypoPRO Roboto Slab Light */
+@font-face {
+    font-family:  'TypoPRO Roboto Slab';
+    src:          url('TypoPRO-RobotoSlab-Light.eot');
+    src:          local('*'),
+                  url('TypoPRO-RobotoSlab-Light.eot?#iefix') format('embedded-opentype'),
+                  url('TypoPRO-RobotoSlab-Light.woff') format('woff'),
+                  url('TypoPRO-RobotoSlab-Light.ttf') format('truetype');
+    font-style:   normal;
+    font-weight:  300;
+    font-stretch: normal;
+    font-variant: normal;
+}
+
+
+/* TypoPRO Roboto Slab Regular */
+@font-face {
+    font-family:  'TypoPRO Roboto Slab';
+    src:          url('TypoPRO-RobotoSlab-Regular.eot');
+    src:          local('*'),
+                  url('TypoPRO-RobotoSlab-Regular.eot?#iefix') format('embedded-opentype'),
+                  url('TypoPRO-RobotoSlab-Regular.woff') format('woff'),
+                  url('TypoPRO-RobotoSlab-Regular.ttf') format('truetype');
+    font-style:   normal;
+    font-weight:  normal;
+    font-stretch: normal;
+    font-variant: normal;
+}
+
+
+/* TypoPRO Roboto Slab Thin */
+@font-face {
+    font-family:  'TypoPRO Roboto Slab';
+    src:          url('TypoPRO-RobotoSlab-Thin.eot');
+    src:          local('*'),
+                  url('TypoPRO-RobotoSlab-Thin.eot?#iefix') format('embedded-opentype'),
+                  url('TypoPRO-RobotoSlab-Thin.woff') format('woff'),
+                  url('TypoPRO-RobotoSlab-Thin.ttf') format('truetype');
+    font-style:   normal;
+    font-weight:  200;
+    font-stretch: normal;
+    font-variant: normal;
+}
