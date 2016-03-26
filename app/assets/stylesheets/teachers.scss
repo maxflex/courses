@@ -1,0 +1,104 @@
+$red: #981a21;
+
+@keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: -100% 100%; }
+}
+@-webkit-keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: -100% 100%; }
+}
+@-ms-keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: -100% 100%; }
+}
+@-moz-keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: -100% 100%; }
+}
+
+.content#three {
+  animation: animatedBackground 50s linear infinite;
+	// -ms-animation: animatedBackground 60s linear infinite;
+	// -moz-animation: animatedBackground 60s linear infinite;
+	// -webkit-animation: animatedBackground 60s linear infinite;
+  color: white;
+  background: asset-url('backgrounds/teachers.png');
+  background-size: 200px;
+  & h1 {
+    text-align: center;
+    padding-top: 50px !important;
+    font-size: 36px;
+  }
+	& .tutor-info {
+		display: flex;
+		padding: 20px;
+		font-size: 18px;
+		width: 1000px;
+		margin: 0 auto;
+		// width: 75%;
+		// font-size: 18px;
+		// margin-top: 30px;
+		& > div {
+			-webkit-animation-fill-mode: forwards !important; /* Chrome, Safari, Opera */
+			animation-fill-mode: forwards !important;
+			opacity: 0;
+			padding: 5px 0;
+			display: flex;
+			align-items: center;
+			width: 50%;
+			margin-right: 20px;
+			font-weight: bold;
+			// color: #43525B;
+	    // text-shadow: 1px 1px 10px #EBEEF0;
+			color: white;
+			text-shadow: 1px 1px 10px #43525B;
+			font-family: 'RaleWayExtraLight';
+			font-size: 16px;
+			& img {
+				height: 60px;
+				margin-right: 10px;
+			}
+		}
+		// text-align: center;
+		// background-color: rgba(255, 255, 255, 0.9);
+		// font-weight: bold;
+		// color: #EB5745;
+		// padding: 20px 40px;
+		// box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+		// border-radius: 5px;
+	}
+  & .tutor-list {
+    margin-top: 75px;
+    display: flex;
+    width: 100%;
+    & .tutor {
+      flex: 1;
+      text-align: center;
+      & img {
+        height: 250px;
+        width: 250px;
+        border-radius: 50%;
+        transition: box-shadow .25s;
+        box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+        position: relative;
+        &:hover {
+          box-shadow: 0 16px 28px 0 rgba(0,0,0,0.22),0 25px 55px 0 rgba(0,0,0,0.21);
+          top: -0.5px;
+        }
+      }
+			& h2 {
+				margin-bottom: 0;
+			}
+			& h4 {
+				color: white;
+				margin-top: 10px;
+				// color: #FFAB00;
+				// text-shadow: 0 0 1px #43525B;
+			}
+			& .fa {
+				margin-right: 5px;
+			}
+    }
+  }
+}

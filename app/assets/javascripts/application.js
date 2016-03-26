@@ -14,7 +14,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //
-//= require angular/angular.min
+//= require vue/dist/vue
 //= require Snap.svg/dist/snap.svg-min
+//= require waypoints/lib/jquery.waypoints.min
 //
 //= require_tree .

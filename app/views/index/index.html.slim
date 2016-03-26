@@ -1,54 +1,6 @@
-.tabs.tabs-style-underline
-  nav
-    ul
-      li ng-click="tab_current = 1" ng-class="{'tab-current': tab_current == 1}"
-        a href="#main" 
-          span.icon.fa.fa-diamond.ruby-color
-          span Главная
-      li ng-click="tab_current = 2" ng-class="{'tab-current': tab_current == 2}"
-        a href="#courses" 
-          span.icon.fa.fa-code
-          span Курсы
-      li ng-click="tab_current = 3" ng-class="{'tab-current': tab_current == 3}"
-        a href="#teachers" 
-          span.icon.fa.fa-users
-          span Преподаватели
-      li ng-click="tab_current = 4" ng-class="{'tab-current': tab_current == 4}"
-        a href="#prices" 
-          span.icon.fa.fa-dollar
-          span Цены
-      li ng-click="tab_current = 5" ng-class="{'tab-current': tab_current == 5}"
-        a href="#signup" 
-          span.icon.fa.fa-send
-          span Записаться
-div.content#one
-  .center-text-wrap
-    .center-text
-      h1 
-        #line-1 Курсы программирования
-        #line-2 Ruby On Rails
-  #video_bg
-    video(loop autoplay muted)
-      source src="videos/ruby.mp4" type="video/mp4" 
-  .scroll_down 
-    .mouse
-      .mouse-mouvement
-    .mouse-message Прокрутите
-div.content#two
-  svg#info-1
-  = image_tag('icons/ruby.png', height: 355, class: 'ruby-icon')
-  .row-1.center-text
-    h1.text-danger
-      | Курсы программирования с уклоном на 
-      | монетизацию своих знаний
-    / p.center-text Ruby on Rails является самым современным, востребованным, быстро развивающимся 
-    / p.center-text и лёгким для обучения языком программирования
-    p Наша цель – не просто научить вас программировать. Мы научим вас быстро воплощать
-    p идеи в реальность и зарабатывать на своих знаниях в самой востребованной области 21 века
-  .bubble.one 
-    .hi-icon-effect-1.hi-icon-effect-1a
-      a.hi-icon.fa-line-chart
-  / Самый современный и быстро развивающийся язык программирования
-div.content#three  
-div.content#four
+= render 'menu'
+= render 'main'
+= render 'courses'
+= render 'teachers'  
+= render 'prices'
 div.content#five

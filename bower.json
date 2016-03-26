@@ -22,6 +22,8 @@
     "animate.css": "~3.5.1",
     "font-awesome": "fontawesome#~4.5.0",
     "Snap.svg": "snap.svg#~0.4.1",
-    "waypoints": "^4.0.0"
+    "waypoints": "^4.0.0",
+    "vue": "^1.0.18",
+    "scrollmagic": "^2.0.5"
   }
 }

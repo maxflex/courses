@@ -1,6 +1,20 @@
 // Place all the styles related to the index controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@font-face {
+  font-family: "RaleWayLight";
+  src: font-url('Raleway-Light.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: "RaleWayExtraLight";
+  src: font-url('Raleway-ExtraLight.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: "RaleWayThin";
+  src: font-url('Raleway-Thin.ttf') format("truetype");
+}
 
 $pink: #D13350;
 $red: #981a21;
@@ -31,6 +45,16 @@ html,body {
   margin:0;
   font-family: 'Scala';
 }
+
+body {
+  overflow-x: hidden;
+  // overflow-y: hidden;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
 
 .scroll_down {
     opacity: 0;
@@ -81,6 +105,13 @@ html,body {
 .content {
   height:100%;
   min-height:100%;/*for mozilla*/
+  & .content-body {
+    max-width: 1440px;
+    margin: 0 auto;
+    height:100%;
+    min-height:100%;/*for mozilla*/
+    position: relative;
+  }
 }
 
 html>body .content {
@@ -142,61 +173,8 @@ html>body .content {
   }
 }
 
-#two {
-  // background: #8F2041;
-  z-index: 1;
-  background: white;
-  & .ruby-icon {
-    position: absolute;
-    left: calc(50% - 177.5px);
-    top: calc(50% - 177.5px);
-    opacity: 1;
-    z-index: -1;
-  }
-  & .row-1 {
-    display: table;
-    width: 100%;
-    height: 100%;
-    & h1 {
-      margin-top: 50px !important;
-      font-size: 36px;
-    }
-  }
-
-  & svg {
-    z-index: 100;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  }
-
-  & p {
-    margin: 2px;
-  }
-
-  & .bubble {
-    position: absolute;
-    opacity: 0;
-    // background: $bright-red;
-    color: white;
-    // max-width: 200px;
-    // border-radius: 10px;
-    // padding: 10px 20px;
-    z-index: 101;
-    // text-align: center;
-    &.one {
-      left: 6.5%;
-      top: calc(50% - 61.5px);
-    }
-  }
-}
-
 #three {
   background: #EB5745;
-}
-
-#four {
-  background: #FF905E;
 }
 
 #five {

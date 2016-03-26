@@ -1,0 +1,32 @@
+div.content#two
+  .content-body
+    svg#info-1
+    = image_tag('icons/ruby.png', height: 355, class: 'ruby-icon')
+    .row-1.center-text
+      h1.text-danger
+        | Курсы программирования с уклоном на 
+        | монетизацию своих знаний
+      / p.center-text Ruby on Rails является самым современным, востребованным, быстро развивающимся 
+      / p.center-text и лёгким для обучения языком программирования
+      p Наша цель – не просто научить вас программировать. Мы научим вас быстро воплощать
+      p идеи в реальность и зарабатывать на своих знаниях в самой востребованной области 21 века
+    .bubble.one
+      .hi-icon-effect-1.hi-icon-effect-1a
+        a.hi-icon.fa-line-chart
+      span Самый современный и быстро развивающийся язык по версии <a href='http://codering.info/trending' target='_blank'>Codering</a>
+    .bubble.two 
+      .hi-icon-effect-1.hi-icon-effect-1a
+        a.hi-icon.fa-rocket
+      span Минимальное время от начала разработки до реального проекта
+    .bubble.three 
+      .hi-icon-effect-1.hi-icon-effect-1a
+        a.hi-icon.fa-globe
+      span Востребованность во всех странах мира
+    .bubble.four.animated 
+      .hi-icon-effect-1.hi-icon-effect-1a
+        a.hi-icon.fa-female @mouseover='bubble(4)' @mouseleave='bubble(4, false)'
+      span.hidden.animated :class="{'fadeInDown': bubbles[4]}" Девушкам нравятся программисты Ruby ;)
+    .bubble.five.animated
+      .hi-icon-effect-1.hi-icon-effect-1a
+        a.hi-icon.fa-graduation-cap @mouseover='bubble(5)' @mouseleave='bubble(5, false)'
+      span.hidden.animated :class="{'fadeInDown': bubbles[5]}" Легок в изучении, понятен и прост в освоении

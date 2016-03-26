@@ -2707,6 +2707,9 @@
   50% {
     opacity: 1;
   }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes zoomIn {
@@ -2717,6 +2720,9 @@
   }
 
   50% {
+    opacity: 1;
+  }
+  100% {
     opacity: 1;
   }
 }
