@@ -8,6 +8,7 @@ $(document).ready ->
     el: 'body'
     data:
       current_tab: 1
+      overlay: false
     methods:
       start_amimation: ->
         $('#line-1').addClass('animated fadeIn').one animation_done, ->

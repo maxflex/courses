@@ -1,4 +1,6 @@
+= render 'overlay'
 div.content#four
+  h1 Choose your destiny
   #triangle-topleft.animated
   #triangle-bottomright.animated
   #pricing-table
@@ -7,13 +9,16 @@ div.content#four
       .price 18,000
       .rubbles рублей/курс
       = image_tag 'icons/head-cross.png'
+      button @click='overlay = true' Подробнее
     .pricing-option
       .pricing-header Профессионал
       .price 25,000
       .rubbles рублей/курс
       = image_tag 'icons/checkboard-graph.png'
+      button Подробнее
     .pricing-option
       .pricing-header Geek
       .price 32,000
       .rubbles рублей/курс
       = image_tag 'icons/glasses.png'
+      button Подробнее
