@@ -71,7 +71,7 @@ runAllAnimations = ->
       strokeWidth: 4
 
     bubble = $('.bubble.three')
-    line.animate {d: "M#{x},#{y}L#{x},#{y+100}"}, animation_speed, ->
+    line.animate {d: "M#{x},#{y}L#{x},#{y+ 100 + (bubble.offset().top / 25)}"}, animation_speed, ->
       # bubble.css 'left', $("path").eq(1).position().right - 75
       bubble.addClass 'animated fadeInUp'
       showOtherBubbles()

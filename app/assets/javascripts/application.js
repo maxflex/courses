@@ -17,5 +17,6 @@
 //= require vue/dist/vue
 //= require Snap.svg/dist/snap.svg-min
 //= require waypoints/lib/jquery.waypoints.min
-//
+//= require jquery.inputmask/dist/min/jquery.inputmask.bundle.min
+//= require sweetalert/dist/sweetalert.min
 //= require_tree .

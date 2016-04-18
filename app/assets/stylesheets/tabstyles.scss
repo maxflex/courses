@@ -70,11 +70,11 @@ $bottom_line: $green;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	line-height: 2.5;
-	color: $link_color !important;
+	color: $link_color;
 	text-decoration: none !important;
-	&:hover, &:focus {
-		color: $link_hover !important;
-	}
+	// &:hover, &:focus {
+	// 	color: $link_hover !important;
+	// }
 }
 
 .tabs nav a span {
@@ -83,7 +83,7 @@ $bottom_line: $green;
 }
 
 .tabs nav li.tab-current a {
-	color: $link_color_active !important;
+	// color: $link_color_active !important;
 }
 
 .tabs nav a:focus {

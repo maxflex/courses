@@ -1,0 +1,21 @@
+div.content#five
+  .before_signup v-show='!request_sent'
+    h1 Записаться на курсы
+    div
+      span.input.input--hoshi
+        input#input-4.input__field.input__field--hoshi type="text" v-model='request.name'
+        label.input__label.input__label--hoshi
+          span.input__label-content.input__label-content--hoshi Имя
+    div
+      span.input.input--hoshi
+        input#request-phone.input__field.input__field--hoshi(type="text" v-model='request.phone' v-el:phone)
+        label.input__label.input__label--hoshi
+          span.input__label-content.input__label-content--hoshi Телефон
+    div style='margin-top: 50px'
+      button.btn.btn-4.btn-4c.icon-arrow-right @click='signup' Записаться
+  .after_signup v-show='request_sent'
+    .after_signup_wrapper
+      h1 Заявка отправлена!
+      h4 
+        | {{ request.name }}, мы перезвоним Вам в ближайшее время
+  .more-about-courses подробная информация о курсах

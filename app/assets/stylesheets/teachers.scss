@@ -18,12 +18,12 @@ $red: #981a21;
 }
 
 .content#three {
-  animation: animatedBackground 50s linear infinite;
+  animation: animatedBackground 75s linear infinite;
 	// -ms-animation: animatedBackground 60s linear infinite;
 	// -moz-animation: animatedBackground 60s linear infinite;
 	// -webkit-animation: animatedBackground 60s linear infinite;
   color: white;
-  background: asset-url('backgrounds/teachers.png');
+  background: asset-url('backgrounds/icons-blue.jpg');
   background-size: 200px;
   & h1 {
     text-align: center;
@@ -79,12 +79,13 @@ $red: #981a21;
         height: 250px;
         width: 250px;
         border-radius: 50%;
-        transition: box-shadow .25s;
+        transition: all linear .25s;
         box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
         position: relative;
+				top: 0;
         &:hover {
           box-shadow: 0 16px 28px 0 rgba(0,0,0,0.22),0 25px 55px 0 rgba(0,0,0,0.21);
-          top: -0.5px;
+          top: -3px;
         }
       }
 			& h2 {

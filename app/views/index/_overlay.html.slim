@@ -1,6 +1,17 @@
-.overlay.overlay-scale :class="{'open': overlay}"
+.overlay.overlay-scale :class="{
+  'open': overlay,
+  'plan-1': selected_plan.id == 1,
+  'plan-2': selected_plan.id == 2,
+  'plan-3': selected_plan.id == 3,
+}"
   button.overlay-close type='button' @click='overlay = false' Close
   .valign-wrapper.full-size
     .valign style='width: 100%'
-      .row style='padding: 100px'
-        h1 here
+      .row style='padding: 30px'
+        h1.center
+          | {{ selected_plan.title | uppercase}}
+        img :src='get_img(selected_plan)'
+        div v-for='option in selected_plan.options'
+          h3 
+            i.fa.fa-plus
+            | {{ option.title }}

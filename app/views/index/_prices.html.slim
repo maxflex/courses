@@ -1,24 +1,15 @@
 = render 'overlay'
 div.content#four
-  h1 Choose your destiny
+  / h1 Choose your destiny
   #triangle-topleft.animated
   #triangle-bottomright.animated
   #pricing-table
-    .pricing-option
-      .pricing-header Новичок 
-      .price 18,000
+    .pricing-option v-for='plan in plans' :class="{'selected': selected_plan == plan}"
+      .pricing-header 
+        | {{ plan.title }}
+      .price 
+        | {{ plan.price | price }}
       .rubbles рублей/курс
-      = image_tag 'icons/head-cross.png'
-      button @click='overlay = true' Подробнее
-    .pricing-option
-      .pricing-header Профессионал
-      .price 25,000
-      .rubbles рублей/курс
-      = image_tag 'icons/checkboard-graph.png'
-      button Подробнее
-    .pricing-option
-      .pricing-header Geek
-      .price 32,000
-      .rubbles рублей/курс
-      = image_tag 'icons/glasses.png'
-      button Подробнее
+      img :src="get_img(plan)"
+      button :class="{'selected': selected_plan == plan}" @click='select_plan(plan)' 
+        | {{selected_plan == plan ? 'Выбрано' : 'Выбрать'}}

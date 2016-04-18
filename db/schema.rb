@@ -11,23 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160327171505) do
+ActiveRecord::Schema.define(version: 20160328193144) do
 
-  create_table "plan_and_options", force: :cascade do |t|
-    t.integer  "plan_id"
-    t.integer  "plan_option_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
-  end
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
-  add_index "plan_and_options", ["plan_id"], name: "index_plan_and_options_on_plan_id"
-  add_index "plan_and_options", ["plan_option_id"], name: "index_plan_and_options_on_plan_option_id"
-
-  create_table "plan_options", force: :cascade do |t|
+  create_table "options", force: :cascade do |t|
     t.string   "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "count"
   end
+
+  create_table "plan_options", force: :cascade do |t|
+    t.integer  "plan_id"
+    t.integer  "option_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "plan_options", ["option_id"], name: "index_plan_options_on_option_id", using: :btree
+  add_index "plan_options", ["plan_id"], name: "index_plan_options_on_plan_id", using: :btree
 
   create_table "plans", force: :cascade do |t|
     t.string   "title"

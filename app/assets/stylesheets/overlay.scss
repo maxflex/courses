@@ -8,11 +8,40 @@ $pink-light: #ED9CA1;
 	height: 100%;
 	top: 0;
 	left: 0;
-	background: rgba(#F578AC, 0.75);
+	&.plan-1 {
+		background: rgba(#74777B, 0.95);
+
+	}
+	&.plan-2 {
+		background: rgba(#F578AC, 0.95);
+	}
+	&.plan-3 {
+		background: rgba(#3851bc, 0.95);
+	}
 	color: white;
   z-index: 9999;
+	text-align: center;
 	& .circle {
 		height: 75px;
+	}
+
+	& h1 {
+		text-align: center;
+		font-size: 52px;
+		font-family: 'RaleWayExtraLight';
+		margin-top: 0;
+	}
+
+	& .fa-plus {
+		margin-right: 8px;
+		color: #64dd17;
+		position: relative;
+		top: 1px;
+	}
+
+	& img {
+		height: 150px;
+		text-align: center;
 	}
 
 	& h5 {

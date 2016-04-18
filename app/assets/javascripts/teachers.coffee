@@ -11,6 +11,19 @@ $(document).ready ->
   ,
     offset: '10%'
 
+  # 
+  # movementStrength = 50
+  # height = movementStrength / $(window).height()
+  # width = movementStrength / $(window).width()
+  # $('#three').mousemove (e) ->
+  #   pageX = e.pageX - ($(window).width() / 2)
+  #   pageY = e.pageY - ($(window).height() / 2)
+  #   newvalueX = width * pageX * -1 - 25
+  #   newvalueY = height * pageY * -1 - 50
+  #   $('#three').css 'background-position', newvalueX + 'px     ' + newvalueY + 'px'
+  #   return
+  # return
+
 
   # animation_index = 0
   # animations = ['fadeInLeft', 'fadeInRight', 'fadeInUp', 'fadeInUp']
