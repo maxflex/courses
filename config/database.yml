@@ -22,5 +22,5 @@ test:
 production:
   <<: *default
   database: courses_production
-  username: rails
-  password: M5glzzpMlQ
+  username: ENV['PG_USERNAME']
+  password: ENV['PG_PASSWORD']

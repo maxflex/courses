@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Plan:</strong>
+  <%= @request.plan %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @request.name %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @request.phone %>
+</p>
+
+<%= link_to 'Edit', edit_request_path(@request) %> |
+<%= link_to 'Back', requests_path %>

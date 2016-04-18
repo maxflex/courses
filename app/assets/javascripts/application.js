@@ -19,4 +19,5 @@
 //= require waypoints/lib/jquery.waypoints.min
 //= require jquery.inputmask/dist/min/jquery.inputmask.bundle.min
 //= require sweetalert/dist/sweetalert.min
+//= require fakeLoader/fakeLoader
 //= require_tree .

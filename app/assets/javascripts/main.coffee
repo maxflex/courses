@@ -4,6 +4,13 @@
 @animation_done = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend'
 
 $(document).ready ->
+  $("#fakeLoader").fakeLoader
+    spinner:"spinner4",
+    bgColor:"#981a21",
+
+  $.ajaxSetup
+    headers:
+      'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
 
   Vue.filter 'price', (value) ->
     return value / 1000 + ',000'
@@ -34,8 +41,17 @@ $(document).ready ->
         if !!this.request.name and $(this.$els.phone).inputmask('isComplete')
           swal 'Заявка отправлена', "#{this.request.name}, мы перезвоним Вам в ближайшее время", 'success'
           this.request_sent = true
+          $.post '/requests',
+            plan_id: this.selected_plan.id
+            name: this.request.name
+            phone: this.request.phone
         else
           swal 'Ошибка', 'Необходимо заполнить имя и телефон', 'error'
+      menu: (id) ->
+        this.current_tab = id
+        $('html, body').animate
+          scrollTop: $(".menu-#{id}").offset().top - 72
+        , 500
       bind_menu_change: ->
         $('.content').each (index, el) =>
           $(el).waypoint (direction) =>
@@ -52,5 +68,7 @@ $(document).ready ->
       this.plans = JSON.parse this.plans
       this.assets = JSON.parse this.assets
     ready: ->
-      this.start_amimation()
-      this.bind_menu_change()
+      $('#video').on 'canplaythrough', =>
+        $("#fakeLoader").fadeOut()
+        this.start_amimation()
+        this.bind_menu_change()

@@ -1,23 +1,23 @@
 .tabs.tabs-style-underline
   nav
     ul
-      li :class="{'tab-current': current_tab == 1}" @click='current_tab = 1'
+      li :class="{'tab-current': current_tab == 1}" @click='menu(1)'
         a href="#main" 
           span.icon.fa.fa-diamond.ruby-color
           span Главная
-      li :class="{'tab-current': current_tab == 2}" @click='current_tab = 2'
+      li :class="{'tab-current': current_tab == 2}" @click='menu(2)'
         a href="#courses" 
           span.icon.fa.fa-code
           span Курсы
-      li :class="{'tab-current': current_tab == 3}" @click='current_tab = 3'
+      li :class="{'tab-current': current_tab == 3}" @click='menu(3)'
         a href="#teachers" 
           span.icon.fa.fa-users
           span Преподаватели
-      li :class="{'tab-current': current_tab == 4}" @click='current_tab = 4'
+      li :class="{'tab-current': current_tab == 4}" @click='menu(4)'
         a href="#prices" 
           span.icon.fa.fa-dollar
           span Цены
-      li :class="{'tab-current': current_tab == 5}" @click='current_tab = 5'
+      li :class="{'tab-current': current_tab == 5}" @click='menu(5)'
         a href="#signup" 
           span.icon.fa.fa-send
           span Записаться

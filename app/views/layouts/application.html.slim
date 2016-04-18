@@ -2,9 +2,12 @@ doctype html
 html
   head
     meta content=("text/html; charset=UTF-8") http-equiv="Content-Type" /
-    title Courses
+    title = Seo::TITLE
+    meta name='keywords' content="#{ Seo::KEYWORDS }"
+    meta name='description' content="#{ Seo::DESCRIPTION }"
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   body plans="#{ @plans }" assets="#{ list_image_assets 'icons' }"
+    #fakeLoader
     = yield
