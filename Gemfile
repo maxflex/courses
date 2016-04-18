@@ -40,6 +40,7 @@ group :development do
   gem 'guard-livereload', '~> 2.5', require: false
   gem 'hirb-unicode'
   gem 'capistrano', '~> 3.1'
+  gem 'capistrano-rvm'
   gem 'capistrano-rails', '~> 1.1'
 end
 

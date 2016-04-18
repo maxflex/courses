@@ -116,12 +116,12 @@ nav {
 
 @font-face {
   font-family: 'Roboto';
-  src: url('google-fonts/apache/robotocondensed/RobotoCondensed-Light.ttf') format('truetype');
+  src: font-url('google-fonts/apache/robotocondensed/RobotoCondensed-Light.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Scala';
-  src: url('google-fonts/ufl/ubuntu/Ubuntu-Light.ttf') format('truetype');
+  src: font-url('google-fonts/ufl/ubuntu/Ubuntu-Light.ttf') format('truetype');
 }
 
 /* Styles */

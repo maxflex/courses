@@ -34,19 +34,26 @@ set :deploy_to, '/home/rails/courses'
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
 # set :default_env, :production
+# set :default_env, { rvm_bin_path: '~/.rvm/bin' }
 set :rails_env, :production
+set :rvm_type, :system
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
 
 namespace :deploy do
-  after :restart, :clear_cache do
-    on roles(:web), in: :groups, limit: 3, wait: 10 do
-      # Here we can do anything such as:
-      # within release_path do
-      #   execute :rake, 'cache:clear'
-      # end
+  before :starting, :ensure_user do
+    on roles(:web) do
+      within release_path do
+        execute :service, 'unicorn_courses', 'stop'
+      end
     end
   end
-
+  after :finishing, :notify do
+    on roles(:web), in: :groups, limit: 3, wait: 10 do
+      within release_path do
+        execute :service, 'unicorn_courses', 'start'
+      end
+    end
+  end
 end
