@@ -6,8 +6,9 @@ div.content.menu-1#one
         #line-2 Ruby On Rails
         #line-3 г. Москва
   #video_bg
-    video#video(loop autoplay muted)
-      source src="videos/ruby.mp4" type="video/mp4" 
+    video#video(loop autoplay muted poster="#{ image_path('backgrounds/video-placeholder.png') }")
+      source src="videos/ruby.webm" type="video/webm" 
+      / source src="videos/ruby.mp4" type="video/mp4" 
   .scroll_down 
     .mouse
       .mouse-mouvement

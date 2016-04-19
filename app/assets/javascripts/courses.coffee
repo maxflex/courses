@@ -29,6 +29,8 @@ runAllAnimations = ->
   ruby_icon = $(".ruby-icon")
   image_offset = 66.5
   animation_speed = 750
+  line_width = (($(window).width() - 266) / 2) - ($(window).width() * 0.065 + 100)
+  line_height = (($(window).height() - 226) / 2) - (45 + 33 + ($(window).height() * 0.2 + 61.5 - 156))
 
   drawLine1 = ->
     x = ruby_icon.position().left + image_offset
@@ -41,7 +43,8 @@ runAllAnimations = ->
       strokeWidth: 4
 
     bubble = $('.bubble.one')
-    line.animate {d: "M#{x},#{y}L#{x - 400},#{y}"}, animation_speed, ->
+    $(window).width()
+    line.animate {d: "M#{x},#{y}L#{x - line_width},#{y}"}, animation_speed, ->
       # bubble.css 'left', $("path").first().position().left - 75
       bubble.addClass 'animated fadeInLeft'
 
@@ -56,7 +59,7 @@ runAllAnimations = ->
       strokeWidth: 4
 
     bubble = $('.bubble.two')
-    line.animate {d: "M#{x},#{y}L#{x + 400},#{y}"}, animation_speed, ->
+    line.animate {d: "M#{x},#{y}L#{x + line_width},#{y}"}, animation_speed, ->
       # bubble.css 'left', $("path").first().position().right - 75
       bubble.addClass 'animated fadeInRight'
 
@@ -71,7 +74,7 @@ runAllAnimations = ->
       strokeWidth: 4
 
     bubble = $('.bubble.three')
-    line.animate {d: "M#{x},#{y}L#{x},#{y+ 100 + (bubble.offset().top / 25)}"}, animation_speed, ->
+    line.animate {d: "M#{x},#{y}L#{x},#{y + line_height}"}, animation_speed, ->
       # bubble.css 'left', $("path").eq(1).position().right - 75
       bubble.addClass 'animated fadeInUp'
       showOtherBubbles()

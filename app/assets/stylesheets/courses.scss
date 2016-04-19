@@ -33,12 +33,12 @@ $color: #EB5745;
   }
 
   & .bubble {
+    text-align: center;
     & span {
       width: 200px;
       display: inline-block;
       text-align: center;
       position: relative;
-      left: -34px;
       color: $color;
       &.hidden {
         margin-top: 5px;
@@ -64,7 +64,7 @@ $color: #EB5745;
       top: calc(50% - 61.5px);
     }
     &.three {
-      right: calc(50% - 100px - 23px);
+      right: calc(50% - 100px);
       top: calc(80% - 61.5px);
     }
     &.four {

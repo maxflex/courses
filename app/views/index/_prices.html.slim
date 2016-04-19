@@ -7,9 +7,13 @@ div.content.menu-4#four
     .pricing-option v-for='plan in plans' :class="{'selected': selected_plan == plan}"
       .pricing-header 
         | {{ plan.title }}
-      .price 
-        | {{ plan.price | price }}
-      .rubbles рублей/курс
-      img :src="get_img(plan)"
-      button :class="{'selected': selected_plan == plan}" @click='select_plan(plan)' 
-        | {{selected_plan == plan ? 'Выбрано' : 'Выбрать'}}
+      .pricing-info-wrapper
+        div
+          .price 
+            | {{ plan.price | price }}
+          .rubbles рублей/курс
+        div
+          img :src="get_img(plan)"
+        div
+          button :class="{'selected': selected_plan == plan}" @click='select_plan(plan)' 
+            | {{selected_plan == plan ? 'Выбрано' : 'Выбрать'}}

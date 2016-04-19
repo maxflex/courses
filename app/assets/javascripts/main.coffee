@@ -69,6 +69,7 @@ $(document).ready ->
       this.assets = JSON.parse this.assets
     ready: ->
       $('#video').on 'canplaythrough', =>
+      # $('#video').on 'seeked', =>
         $("#fakeLoader").fadeOut()
         this.start_amimation()
         this.bind_menu_change()
