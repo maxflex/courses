@@ -190,13 +190,16 @@ body {
 
 .content {
   height:100%;
-  min-height:100%;/*for mozilla*/
+  min-height: 745px;
   & .content-body {
     max-width: 1440px;
     margin: 0 auto;
     height:100%;
     min-height:100%;/*for mozilla*/
     position: relative;
+  }
+  & h1 {
+    margin: 0 !important;
   }
 }
 

@@ -141,3 +141,20 @@
     }
   }
 }
+
+// @media all and (max-height: 800px) {
+  .options-list {
+    max-width: 1000px;
+    margin: 0 auto;
+    & div {
+      display: inline-block;
+      width: 50%;
+      &:nth-child(even) {
+        float: right;
+      }
+      &:nth-child(odd) {
+        float: left;
+      }
+    }
+  }
+// }

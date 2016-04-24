@@ -11,7 +11,8 @@
         h1.center
           | {{ selected_plan.title | uppercase}}
         img :src='get_img(selected_plan)'
-        div v-for='option in selected_plan.options'
-          h3 
-            i.fa.fa-plus
-            | {{ option.title }}
+        .options-list
+          div v-for='option in selected_plan.options'
+            h3 
+              i.fa.fa-plus
+              | {{ option.title }}

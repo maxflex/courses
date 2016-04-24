@@ -4,9 +4,9 @@
 @animation_done = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend'
 
 $(document).ready ->
-  $("#fakeLoader").fakeLoader
-    spinner:"spinner4",
-    bgColor:"#981a21",
+  # $("#fakeLoader").fakeLoader
+  #   spinner:"spinner4",
+  #   bgColor:"#981a21",
 
   $.ajaxSetup
     headers:
@@ -68,8 +68,8 @@ $(document).ready ->
       this.plans = JSON.parse this.plans
       this.assets = JSON.parse this.assets
     ready: ->
-      $('#video').on 'canplaythrough', =>
+      # $('#video').on 'canplaythrough', =>
       # $('#video').on 'seeked', =>
-        $("#fakeLoader").fadeOut()
-        this.start_amimation()
-        this.bind_menu_change()
+      $("#fakeLoader").fadeOut()
+      this.start_amimation()
+      this.bind_menu_change()
