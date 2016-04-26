@@ -1,3 +1,9 @@
+PATH
+  remote: ./mobile
+  specs:
+    mobile (0.0.1)
+      rails (~> 4.2.3)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -39,6 +45,7 @@ GEM
     arel (6.0.3)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    browser (2.0.3)
     builder (3.2.2)
     byebug (8.2.1)
     capistrano (3.4.0)
@@ -221,6 +228,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  browser
   byebug
   capistrano (~> 3.1)
   capistrano-rails (~> 1.1)
@@ -231,6 +239,7 @@ DEPENDENCIES
   hirb-unicode
   jbuilder (~> 2.0)
   jquery-rails
+  mobile!
   pg
   rails (= 4.2.3)
   sass-rails (~> 5.0)
@@ -243,4 +252,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.10.5
+   1.11.2

@@ -20,7 +20,6 @@ ActiveRecord::Schema.define(version: 20160418212417) do
     t.string   "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "count"
   end
 
   create_table "plan_options", force: :cascade do |t|

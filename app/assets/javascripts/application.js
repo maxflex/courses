@@ -20,4 +20,5 @@
 //= require jquery.inputmask/dist/min/jquery.inputmask.bundle.min
 //= require sweetalert/dist/sweetalert.min
 //= require fakeLoader/fakeLoader
+//= require mobile-angular-ui/dist/js/mobile-angular-ui.min
 //= require_tree .
