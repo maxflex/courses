@@ -10,4 +10,9 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require jquery
+//
+//= require angular/angular.min
+//= require mobile-angular-ui/dist/js/mobile-angular-ui.min
+//= require mobile-angular-ui/dist/js/mobile-angular-ui.gestures.min
 //= require_tree .

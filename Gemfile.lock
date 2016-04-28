@@ -2,7 +2,12 @@ PATH
   remote: ./mobile
   specs:
     mobile (0.0.1)
+      angularjs-rails
+      coffee-rails
+      jquery-rails
+      ng-rails-csrf
       rails (~> 4.2.3)
+      slim
 
 GEM
   remote: https://rubygems.org/
@@ -42,6 +47,7 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    angularjs-rails (1.5.0)
     arel (6.0.3)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
@@ -132,6 +138,7 @@ GEM
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (3.0.2)
+    ng-rails-csrf (0.1.0)
     nokogiri (1.6.7.1)
       mini_portile2 (~> 2.0.0.rc2)
     notiffany (0.0.8)

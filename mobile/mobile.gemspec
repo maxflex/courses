@@ -18,6 +18,11 @@ Gem::Specification.new do |s|
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency "rails", "~> 4.2.3"
+  s.add_dependency "angularjs-rails"
+  s.add_dependency "ng-rails-csrf"
+  s.add_dependency "coffee-rails"
+  s.add_dependency "jquery-rails"
+  s.add_dependency "slim"
 
   s.add_development_dependency "bundler", "~> 1.7"
 end

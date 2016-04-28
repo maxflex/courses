@@ -1,0 +1,254 @@
+@font-face {
+  font-family: "RaleWayLight";
+  src: url(/assets/Raleway-Light-d11b6f8bbb1025a56e94141b4fe29ff6c8cd67c60a0adeb7165679e5fba70988.ttf) format("truetype");
+}
+@font-face {
+  font-family: "RaleWayExtraLight";
+  src: url(/assets/Raleway-ExtraLight-dbe8a009a21ed2e6ad0f7b7eaccb630c3e33708a4301ec0e36f2f562b9d1c11d.ttf) format("truetype");
+}
+@font-face {
+  font-family: "RaleWayThin";
+  src: url(/assets/Raleway-Thin-62c89b72e490e3c7832f9c5ab4e8f554e57356fefd2da31f3e9d0a15b564823e.ttf) format("truetype");
+}
+/* line 29, /var/www/courses/app/assets/stylesheets/index.scss */
+nav ul li:nth-of-type(1).tab-current a {
+  color: #EB5745;
+}
+/* line 31, /var/www/courses/app/assets/stylesheets/index.scss */
+nav ul li:nth-of-type(1).tab-current a:after {
+  background: #EB5745;
+}
+/* line 37, /var/www/courses/app/assets/stylesheets/index.scss */
+nav ul li:nth-of-type(1) a:hover {
+  color: #EB5745;
+}
+/* line 45, /var/www/courses/app/assets/stylesheets/index.scss */
+nav ul li:nth-of-type(2).tab-current a {
+  color: #981a21;
+}
+/* line 47, /var/www/courses/app/assets/stylesheets/index.scss */
+nav ul li:nth-of-type(2).tab-current a:after {
+  background: #981a21;
+}
+/* line 53, /var/www/courses/app/assets/stylesheets/index.scss */
+nav ul li:nth-of-type(2) a:hover {
+  color: #981a21;
+}
+/* line 61, /var/www/courses/app/assets/stylesheets/index.scss */
+nav ul li:nth-of-type(3).tab-current a {
+  color: #1B79B7;
+}
+/* line 63, /var/www/courses/app/assets/stylesheets/index.scss */
+nav ul li:nth-of-type(3).tab-current a:after {
+  background: #1B79B7;
+}
+/* line 69, /var/www/courses/app/assets/stylesheets/index.scss */
+nav ul li:nth-of-type(3) a:hover {
+  color: #1B79B7;
+}
+/* line 77, /var/www/courses/app/assets/stylesheets/index.scss */
+nav ul li:nth-of-type(4).tab-current a {
+  color: #F578AC;
+}
+/* line 79, /var/www/courses/app/assets/stylesheets/index.scss */
+nav ul li:nth-of-type(4).tab-current a:after {
+  background: #F578AC;
+}
+/* line 85, /var/www/courses/app/assets/stylesheets/index.scss */
+nav ul li:nth-of-type(4) a:hover {
+  color: #F578AC;
+}
+/* line 93, /var/www/courses/app/assets/stylesheets/index.scss */
+nav ul li:nth-of-type(5).tab-current a {
+  color: #6a7989;
+}
+/* line 95, /var/www/courses/app/assets/stylesheets/index.scss */
+nav ul li:nth-of-type(5).tab-current a:after {
+  background: #6a7989;
+}
+/* line 101, /var/www/courses/app/assets/stylesheets/index.scss */
+nav ul li:nth-of-type(5) a:hover {
+  color: #6a7989;
+}
+
+/* line 109, /var/www/courses/app/assets/stylesheets/index.scss */
+.text-danger {
+  color: #981a21;
+}
+
+/* line 113, /var/www/courses/app/assets/stylesheets/index.scss */
+.center-text {
+  text-align: center;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url(/assets/google-fonts/apache/robotocondensed/RobotoCondensed-Light-3c8dc0ab1183367c5628994f0896958a9f42fd58f4d4d2c3b0e63ffa3beaebe1.ttf) format("truetype");
+}
+@font-face {
+  font-family: 'Scala';
+  src: url(/assets/google-fonts/ufl/ubuntu/Ubuntu-Light-b7ec9b9f7cf293ecbc832e998ca4a802adeceb77c661c43ebd23eba1adc3e584.ttf) format("truetype");
+}
+/* Styles */
+/* line 128, /var/www/courses/app/assets/stylesheets/index.scss */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Scala';
+}
+
+/* line 134, /var/www/courses/app/assets/stylesheets/index.scss */
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+/* line 140, /var/www/courses/app/assets/stylesheets/index.scss */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* line 145, /var/www/courses/app/assets/stylesheets/index.scss */
+.scroll_down {
+  opacity: 0;
+  position: absolute;
+  bottom: 4%;
+  height: 100px;
+  left: 0;
+  width: 100%;
+  z-index: 89;
+  color: #fff;
+  text-align: center;
+}
+/* line 155, /var/www/courses/app/assets/stylesheets/index.scss */
+.scroll_down .mouse {
+  position: relative;
+  display: block;
+  width: 36px;
+  height: 58px;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 3px solid #fff;
+  border-radius: 23px;
+}
+/* line 168, /var/www/courses/app/assets/stylesheets/index.scss */
+.scroll_down .mouse .mouse-mouvement {
+  position: absolute;
+  display: block;
+  top: 29%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  margin: -4px 0 0 -4px;
+  background: #fff;
+  border-radius: 50%;
+  -webkit-animation: scroll-ani 4s linear infinite;
+  -moz-animation: scroll-ani 4s linear infinite;
+  animation: scroll-ani 4s linear infinite;
+}
+/* line 182, /var/www/courses/app/assets/stylesheets/index.scss */
+.scroll_down .mouse-message {
+  font-size: 14px;
+  text-align: center;
+  display: block;
+  padding: 20px 0 0;
+  color: #fff;
+}
+
+/* line 191, /var/www/courses/app/assets/stylesheets/index.scss */
+.content {
+  height: 100%;
+  min-height: 745px;
+}
+/* line 194, /var/www/courses/app/assets/stylesheets/index.scss */
+.content .content-body {
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 100%;
+  min-height: 100%;
+  /*for mozilla*/
+  position: relative;
+}
+/* line 201, /var/www/courses/app/assets/stylesheets/index.scss */
+.content h1 {
+  margin: 0 !important;
+}
+
+/* line 206, /var/www/courses/app/assets/stylesheets/index.scss */
+html > body .content {
+  height: 100%;
+  position: relative;
+  color: #74777b;
+}
+/* line 210, /var/www/courses/app/assets/stylesheets/index.scss */
+html > body .content > .center-text-wrap {
+  text-align: center;
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+/* line 215, /var/www/courses/app/assets/stylesheets/index.scss */
+html > body .content > .center-text-wrap > .center-text {
+  vertical-align: middle;
+  display: table-cell;
+}
+/* line 218, /var/www/courses/app/assets/stylesheets/index.scss */
+html > body .content > .center-text-wrap > .center-text h1 {
+  font-size: 80px;
+}
+
+/* line 225, /var/www/courses/app/assets/stylesheets/index.scss */
+#video_bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+/* line 232, /var/www/courses/app/assets/stylesheets/index.scss */
+#video_bg video {
+  visibility: visible;
+  margin: auto;
+  position: absolute;
+  z-index: -1;
+  top: 0%;
+  left: 0%;
+  transform: translate(0%, 0%);
+}
+
+@media (min-aspect-ratio: 16 / 9) {
+  /* line 244, /var/www/courses/app/assets/stylesheets/index.scss */
+  video {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+@media (max-aspect-ratio: 16 / 9) {
+  /* line 251, /var/www/courses/app/assets/stylesheets/index.scss */
+  video {
+    width: auto !important;
+    height: 100% !important;
+  }
+}
+/* line 257, /var/www/courses/app/assets/stylesheets/index.scss */
+#one {
+  color: white;
+  background: rgba(152, 26, 33, 0.5);
+}
+/* line 260, /var/www/courses/app/assets/stylesheets/index.scss */
+#one #line-1, #one #line-2, #one #line-3 {
+  opacity: 0;
+}
+/* line 263, /var/www/courses/app/assets/stylesheets/index.scss */
+#one #line-3 {
+  font-size: 22px;
+  margin-top: 30px;
+}
+
+/* line 269, /var/www/courses/app/assets/stylesheets/index.scss */
+#three {
+  background: #EB5745;
+}

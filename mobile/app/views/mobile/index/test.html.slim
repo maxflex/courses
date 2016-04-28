@@ -1,0 +1,56 @@
+.sidebar.sidebar-left.ng-scope ui-track-as-search-param="true" 
+  .scrollable.ng-scope style=("padding-top: 70px;") 
+    h1.scrollable-header.app-name
+      | Menu
+    .scrollable-content
+      .list-group ui-turn-off="uiSidebarLeft" 
+        a.list-group-item.active href="#/" 
+          | Home
+          i.fa.fa-chevron-right.pull-right
+        a.list-group-item href="#/scroll" 
+          | Scroll
+          i.fa.fa-chevron-right.pull-right
+        a.list-group-item href="#/toggle" 
+          | Toggle
+          i.fa.fa-chevron-right.pull-right
+.sidebar.sidebar-right
+  .scrollable
+    h1.scrollable-header.app-name My App
+    .scrollable-content
+      .list-group ui-turn-off="uiSidebarRight" 
+        a.list-group-item href="#/link1" 
+          | Link 1
+          i.fa.fa-chevron-right.pull-right
+        a.list-group-item href="#/link2" 
+          | Link 2
+          i.fa.fa-chevron-right.pull-right
+
+.app ui-swipe-right="Ui.turnOn('uiSidebarLeft')" ui-swipe-left="Ui.turnOff('uiSidebarLeft')"
+  .navbar.navbar-app.navbar-absolute-top
+    .navbar-brand.navbar-brand-center ui-yield-to="title" 
+      span.ng-scope
+        | Courses
+    .btn-group.pull-left
+      .btn.sidebar-toggle ui-toggle="uiSidebarLeft" 
+        i.fa.fa-bars
+        |  Почему RoR
+    .btn-group.pull-right ui-yield-to="navbarAction" 
+      .btn.ng-scope ui-toggle="uiSidebarRight" 
+        i.fa.fa-comment
+        | Подать заявку
+  .app-body ng-class=("{loading: loading}")
+    .app-content-loading.ng-hide ng-show="loading" 
+      i.fa.fa-spinner.fa-spin.loading-spinner
+    .app-content
+      /! ngView: undefined
+      ng-view.ng-scope
+        .scrollable.ng-scope
+          .scrollable-content
+            .list-group.text-center
+              .list-group-item.list-group-item-home.title
+                h1 Курсы по ruby on rails
+              .list-group-item.list-group-item-home.two
+                h1 Курсы программирования с уклоном на монетизацию своих знаний
+                p Наша цель – не просто научить вас программировать. Мы научим вас быстро воплощать
+                p идеи в реальность и зарабатывать на своих знаниях в самой востребованной области 21 века
+  div ui-yield-to="modals"
