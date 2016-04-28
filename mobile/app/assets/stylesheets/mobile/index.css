@@ -84,6 +84,51 @@
 
 }
 
+.price-title {
+  background-color: #F578AC;
+  font-size: 15px;
+}
+
+.price-image {
+  width: 30%;
+  float: left;
+}
+
+.entry {
+  background-color: #1B1B1B !important;
+  background-image: url(/assets/backgrounds/geometry-18839e55dd009584d71428f22212a821610be81de7b362587579975c21446891.png)
+}
+
+.entry .btn-primary {
+  background-color: #981a21;
+  border-color: #981a21
+}
+
+.entry .info {
+  margin-top: 20%;
+}
+
+.entry .info a {
+  color: #981a21;
+}
+
+.entry .btn-primary:active {
+  background-color: #660404;
+  border-color: #981a21
+}
+
+.entry .btn-primary:hover {
+  background-color: #660404;
+  border-color: #981a21
+}
+
+/*.price-description {
+  width: 65%;
+  float: right;
+}*/
+
+
+/* Examples */
 
 #lightbulb {
   font-size: 100px;

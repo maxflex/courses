@@ -95,4 +95,39 @@
                     h4 Альберт Корнеенко
                     i.fa.fa-university
                     h5 МГУ
+                    
+              .list-group-item.list-group-item-home.entry
+                h3 Записаться на курсы
+                fieldset
+                  legend
+                  .form-group.has-success.has-feedback
+                    label Имя
+                    input.form-control.ng-pristine.ng-untouched.ng-valid.needsclick.ng-valid-email ng-model="name" placeholder=("Имя") type="text" /
+                  .form-group
+                    label Телефон
+                    input.form-control.needsclick placeholder="Телефон" ng-model="phone" type="text" /
+                hr/
+                button.btn.btn-primary.btn-block ng-click="signup()"
+                  | Записаться
+                .info
+                  a href="#" 
+                    | подробная информация о курсах
+                
+              / .list-group-item.list-group-item-home.price
+              /   / h3 Молодые преподаватели из ведущих вузов страны
+              /   div.price-item
+              /     .price-image
+              /       img src="/assets/icons/head-cross-cd02db2820ed3a3351b03f82495722caf4878c948201bea5052e2b64872e2099.png" width="80"
+              /     .row.price-description
+              /       h5 Новичок
+              /       span.price 18 000
+              /       
+                  / .row
+                  /   .col-sm-10.price-title
+                  /     | Новичок
+                  /   .col-sm-12.price
+                  /     | 18 000
+                  /   .col-sm-12.image
+                  /   .col-sm-12.enter
+                  /     | Кнопка записаться
   div ui-yield-to="modals"
