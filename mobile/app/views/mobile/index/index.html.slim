@@ -95,7 +95,121 @@
                     h4 Альберт Корнеенко
                     i.fa.fa-university
                     h5 МГУ
+              .list-group-item.list-group-item-home.price
+                / h3 Молодые преподаватели из ведущих вузов страны
+                div.price-item
+                  div default="1" ui-state="activeTab" 
+                    ul.nav.nav-tabs
+                      li ui-class=("{'active': activeTab == 1}") 
+                        a ui-set=("{'activeTab': 1}")  Новичок
+                      li ui-class=("{'active': activeTab == 2}") 
+                        a ui-set=("{'activeTab': 2}")  Профессионал
+                      li ui-class=("{'active': activeTab == 3}") 
+                        a ui-set=("{'activeTab': 3}")  Geek
+                    div.price-title ui-if=("activeTab == 1") 
+                      h3.page-header Новичок
+                      img src="/assets/icons/head-cross-cd02db2820ed3a3351b03f82495722caf4878c948201bea5052e2b64872e2099.png" width="80"
+                      .pull-left
+                        p 
+                          i.fa.fa-plus
+                          |  Способность создать сайт с нуля
+                        p 
+                          i.fa.fa-plus
+                          |  Способность монетизировать проект
+                        p 
+                          i.fa.fa-plus
+                          |  Способность реализовать любую идею
+                        p 
+                          i.fa.fa-plus
+                          |  Сертификат об окончании курсов
+                      h5 18 000
+                      h6 руб/курс
+                      a.price-button ng-click="selectSkill(1)" ng-class="plan_id == 1 ? 'selected' : ''"
+                        | {{ beginner }}
+
+                    div.price-title ui-if=("activeTab == 2") 
+                      h3.page-header Профессионал
+                      img src="/assets/icons/checkboard-graph-f09c26fee315b68c1d3f9a518931fe9e8fe4b16df2e240fcef3ebbef0ae94e0d.png" width="80"
+                      .pull-left
+                        p 
+                          i.fa.fa-plus
+                          |  Способность создать сайт с нуля
+                        p 
+                          i.fa.fa-plus
+                          |  Способность монетизировать проект
+                        p 
+                          i.fa.fa-plus
+                          |  Способность реализовать любую идею
+                        p 
+                          i.fa.fa-plus
+                          |  Рекомендация на hh.ru
+                        p 
+                          i.fa.fa-plus
+                          |  Персональная работа с преподавателем
+                        p 
+                          i.fa.fa-plus
+                          |  Футболка программиста Ruby
+                        p 
+                          i.fa.fa-plus
+                          |  Сертификат об окончании курсов
+                      h5 25 000
+                      h6 руб/курс
+                      a.price-button ng-click="selectSkill(2)" ng-class="plan_id == 2 ? 'selected' : ''"
+                        | {{ proffesional }}
+                    div.price-title ui-if=("activeTab == 3") 
+                      h3.page-header Geek
+                      img src="/assets/icons/glasses-7d7c216747ecba3415ef189dabc011d79f15355f67e60a095432c401c7741d51.png" width="80"
+                      .pull-left
+                        p 
+                          i.fa.fa-plus
+                          |  Способность создать сайт с нуля
+                        p 
+                          i.fa.fa-plus
+                          |  Способность монетизировать проект
+                        p 
+                          i.fa.fa-plus
+                          |  Способность реализовать любую идею
+                        p 
+                          i.fa.fa-plus
+                          |  Рекомендация на hh.ru
+                        p 
+                          i.fa.fa-plus
+                          |  Персональная работа с преподавателем
+                        p 
+                          i.fa.fa-plus
+                          |  Футболка программиста Ruby
+                        p 
+                          i.fa.fa-plus
+                          |  Персональная помощь с 
+                        p реализацией идей
+                        p 
+                          i.fa.fa-plus
+                          |  Online-резюме у нас на сайте
+                        p 
+                          i.fa.fa-plus
+                          |  Сертификат об окончании курсов
+                      h5 32 000
+                      h6 руб/курс
+                      a.price-button ng-click="selectSkill(3)" ng-class="plan_id == 3 ? 'selected' : ''"
+                        | {{ geek }}
+                        /! ...
+                  / .price-title
+                  /   h4 Новичок
+                  /   img src="/assets/icons/head-cross-cd02db2820ed3a3351b03f82495722caf4878c948201bea5052e2b64872e2099.png" width="80"
+                  /   h5 18 000
+                  /   h6 руб/курс
+                  / .price-description
+                  /   button.btn.btn-primary.btn-block ng-click="signup()"
+                  /     | Записаться
                     
+                  / .row
+                  /   .col-sm-10.price-title
+                  /     | Новичок
+                  /   .col-sm-12.price
+                  /     | 18 000
+                  /   .col-sm-12.image
+                  /   .col-sm-12.enter
+                  /     | Кнопка записаться        
               .list-group-item.list-group-item-home.entry
                 h3 Записаться на курсы
                 fieldset
@@ -106,28 +220,22 @@
                   .form-group
                     label Телефон
                     input.form-control.needsclick placeholder="Телефон" ng-model="phone" type="text" /
+                  .error ng-show="error"
+                    span.fa-stack.fa-1x
+                      i.fa.fa-circle.fa-stack-2x
+                      i.fa.fa-info.fa-stack-1x.fa-inverse
+                    |  {{ errorMessage }}
+                  .success ng-show="success"
+                    span.fa-stack.fa-1x
+                      i.fa.fa-circle.fa-stack-2x
+                      i.fa.fa-check.fa-stack-1x.fa-inverse
+                    |  {{ successMessage }}
                 hr/
-                button.btn.btn-primary.btn-block ng-click="signup()"
+                button.btn.btn-primary.btn-block ng-click="signup()" ng-disabled="success"
                   | Записаться
                 .info
                   a href="#" 
                     | подробная информация о курсах
                 
-              / .list-group-item.list-group-item-home.price
-              /   / h3 Молодые преподаватели из ведущих вузов страны
-              /   div.price-item
-              /     .price-image
-              /       img src="/assets/icons/head-cross-cd02db2820ed3a3351b03f82495722caf4878c948201bea5052e2b64872e2099.png" width="80"
-              /     .row.price-description
-              /       h5 Новичок
-              /       span.price 18 000
-              /       
-                  / .row
-                  /   .col-sm-10.price-title
-                  /     | Новичок
-                  /   .col-sm-12.price
-                  /     | 18 000
-                  /   .col-sm-12.image
-                  /   .col-sm-12.enter
-                  /     | Кнопка записаться
+
   div ui-yield-to="modals"

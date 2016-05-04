@@ -6,6 +6,30 @@
   /*color: red;*/
 }
 
+.error {
+  color: red;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+/*.error i {
+  color: red;
+}*/
+
+.error .fa-circle {
+  color: #981a21;
+}
+
+.success {
+  color: green;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.success .fa-circle {
+  color: green;
+}
+
 .navbar {
   color: #981a21 !important;
 }
@@ -40,6 +64,13 @@
   padding: 8% 0 0 3%;
   font-size: 15px;
   color: #981a21;
+}
+
+.privilege a {
+  cursor: pointer;
+  color: #981a21;
+  text-decoration: underline;
+  font-weight: bold;
 }
 
 .privilege .item {
@@ -84,14 +115,77 @@
 
 }
 
+.price {
+  padding-bottom: 15% !important;
+}
+
 .price-title {
+  /*border: 1px solid #F578AC;*/
+}
+
+.price-title img {
+  margin: 5% 0 5% 0;
+}
+
+.price-title h4 {
   background-color: #F578AC;
+  font-size: 20px;
+  color: white;
+  padding: 10% 0 10% 0;
+}
+
+.price-title h5 {
+  font-size: 20px;
+  font-style: italic;
+  color: #981a21;
+}
+
+.price-item h6 {
+  margin-bottom: 10%;
+}
+
+.price-item p {
+  float: left;
+
+}
+
+.selected {
+  background: #2CC185;
+  color: white !important;
+}
+
+.price-item p i {
+  color: green;
+}
+
+.price-price {
+  width: 100%;
+}
+
+.price-item a {
+  color: #981a21;
+}
+
+.price-button {
+  width: 70%;
   font-size: 15px;
+  font-weight: bold;
+  margin: 5% 0 5% 0;
+  padding: 5% 15% 5% 15%;
+  border: 1px solid gray;
+}
+
+.price-title {
+  color: gray;
 }
 
 .price-image {
   width: 30%;
   float: left;
+}
+
+.price-item .page-header {
+
 }
 
 .entry {
@@ -100,6 +194,21 @@
 }
 
 .entry .btn-primary {
+  background-color: #981a21;
+  border-color: #981a21
+}
+
+.entry .btn-primary[disabled] {
+  background-color: #981a21;
+  border-color: #981a21
+}
+
+.entry .btn-primary :active {
+  background-color: #981a21;
+  border-color: #981a21
+}
+
+.entry .btn-primary :focus {
   background-color: #981a21;
   border-color: #981a21
 }
@@ -122,6 +231,9 @@
   border-color: #981a21
 }
 
+.entry h3 {
+  color: white;
+}
 /*.price-description {
   width: 65%;
   float: right;

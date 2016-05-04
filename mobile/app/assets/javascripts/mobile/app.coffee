@@ -18,17 +18,46 @@ angular.module('Courses', [
 angular.module('Courses')
 .controller 'MainCtrl', ($scope, $http) ->
     console.log "MainCtrl was started"
-    plan_id = '1'
+    $scope.beginner = "Выбрать"
+    $scope.proffesional = "Выбрать"
+    $scope.geek = "Выбрать"
+    $scope.plan_id = 0
+    $scope.name = ''
+    $scope.phone = ''
+
+
+    $scope.selectSkill = (plan_id) ->
+      $scope.beginner = "Выбрать"
+      $scope.proffesional = "Выбрать"
+      $scope.geek = "Выбрать"
+      $scope.plan_id = plan_id
+      switch plan_id
+        when 1 then $scope.beginner = "Выбрано"
+        when 2 then $scope.proffesional = "Выбрано"
+        when 3 then $scope.geek = "Выбрано"
+
+
+      console.log 'plan_id>>>>', $scope.plan_id
 
     $scope.signup = ->
-      if $scope.name.length && $scope.phone.length
+      $scope.error = false
+      if $scope.plan_id == 0
+        $scope.error = true
+        $scope.errorMessage = "Не выбран тип обучения"
+
+      if !$scope.name.length || !$scope.phone.length
+        $scope.error = true
+        $scope.errorMessage = "Поле имя и телефон не могут быть пустыми"
+
+
+      if $scope.error == false
         $http.post '/requests',
-          plan_id: plan_id
+          plan_id: $scope.plan_id
           name: $scope.name
           phone: $scope.phone
         .success (response) ->
-          console.log "success"
+          $scope.success = true
+          $scope.successMessage = $scope.name + " cпасибо что выбрали нас! Наш менеджер свяжется с вами в близжайшее время."
         .error (response) ->
-          console.log "error"
-      else
-        console.log "Пустые поля"
+          $scope.error = true
+          $scope.errorMessage = "Извините что то пошло не так, попробуйте позже"
